@@ -119,7 +119,7 @@ const PROJECTS = [
       "Attendance under 70% drops average grade by ~18%",
     ],
     tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Customer Churn Prediction",
@@ -139,7 +139,7 @@ const PROJECTS = [
       "Random Forest reached 0.86 ROC-AUC on holdout set",
     ],
     tools: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Smart Billing System",
@@ -159,7 +159,7 @@ const PROJECTS = [
       "Detected 4.2% revenue leakage in misapplied discounts",
     ],
     tools: ["MySQL", "SQL", "Excel"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Sales Dashboard (Power BI / Tableau)",
@@ -179,7 +179,7 @@ const PROJECTS = [
       "Region East shows 22% YoY growth, outperforming average",
     ],
     tools: ["Power BI", "Tableau", "DAX", "SQL"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
 ];
 
