@@ -320,6 +320,9 @@ function Hero() {
               className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
+          <p className="mt-4 text-center font-display text-2xl font-bold tracking-tight text-foreground">
+            T Sharanya
+          </p>
           <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-border bg-card p-4 shadow-elegant md:block">
             <div className="flex items-center gap-3">
               <div className="grid h-10 w-10 place-items-center rounded-xl bg-accent/15 text-accent">
