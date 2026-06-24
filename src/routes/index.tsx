@@ -1,7 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState } from "react";
 import heroBg from "@/assets/hero-bg.jpg";
-import profileImg from "@/assets/profile.png";
+import profileAsset from "@/assets/sharanya.jpeg.asset.json";
+import resumeAsset from "@/assets/sharanya-resume.pdf.asset.json";
+const profileImg = profileAsset.url;
+const RESUME_URL = resumeAsset.url;
+const GITHUB_URL = "https://github.com/sharanya-t1/sharanya-s-data-portfolio";
+const LINKEDIN_URL = "https://www.linkedin.com/in/t-sharanya-a305432a4";
+const PHONE = "+91 6303563347";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +18,8 @@ import {
   Github,
   Linkedin,
   Mail,
+  Phone,
+  MapPin,
   Download,
   ArrowRight,
   Moon,
@@ -29,16 +37,16 @@ import { Toaster } from "@/components/ui/sonner";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Sharanya — Aspiring Data Analyst Portfolio" },
+      { title: "T Sharanya — Aspiring Data Analyst Portfolio" },
       {
         name: "description",
         content:
-          "Sharanya's portfolio: data analysis projects, dashboards, Python, SQL, Power BI, Tableau. Turning data into meaningful insights.",
+          "T Sharanya — B.Tech AI & DS student based in Hyderabad. Portfolio of data analysis projects, dashboards, Python, SQL, Power BI, Tableau.",
       },
-      { property: "og:title", content: "Sharanya — Aspiring Data Analyst" },
+      { property: "og:title", content: "T Sharanya — Aspiring Data Analyst" },
       {
         property: "og:description",
-        content: "Projects, dashboards & insights crafted by Sharanya.",
+        content: "B.Tech AI & DS · Hyderabad · Projects, dashboards & insights by T Sharanya.",
       },
       { property: "og:url", content: "/" },
     ],
@@ -111,7 +119,7 @@ const PROJECTS = [
       "Attendance under 70% drops average grade by ~18%",
     ],
     tools: ["Python", "Pandas", "Matplotlib", "Seaborn"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Customer Churn Prediction",
@@ -131,7 +139,7 @@ const PROJECTS = [
       "Random Forest reached 0.86 ROC-AUC on holdout set",
     ],
     tools: ["Python", "Scikit-learn", "Pandas", "NumPy"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Smart Billing System",
@@ -151,7 +159,7 @@ const PROJECTS = [
       "Detected 4.2% revenue leakage in misapplied discounts",
     ],
     tools: ["MySQL", "SQL", "Excel"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
   {
     title: "Sales Dashboard (Power BI / Tableau)",
@@ -171,7 +179,7 @@ const PROJECTS = [
       "Region East shows 22% YoY growth, outperforming average",
     ],
     tools: ["Power BI", "Tableau", "DAX", "SQL"],
-    github: "https://github.com/",
+    github: "https://github.com/sharanya-t1/sharanya-s-data-portfolio",
   },
 ];
 
@@ -206,7 +214,7 @@ function Header({ dark, onToggle }: { dark: boolean; onToggle: () => void }) {
     <header className="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur-xl">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6">
         <a href="#home" className="font-display text-lg font-bold tracking-tight">
-          Sharanya<span className="text-accent">.</span>
+          T Sharanya<span className="text-accent">.</span>
         </a>
         <nav className="hidden items-center gap-1 md:flex">
           {NAV.map((n) => (
@@ -254,7 +262,7 @@ function Hero() {
             Open to internships & full-time roles
           </Badge>
           <h1 className="font-display text-5xl font-bold leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-            Hi, I'm <span className="gradient-text">Sharanya</span>
+            Hi, I'm <span className="gradient-text">T Sharanya</span>
           </h1>
           <p className="mt-4 text-xl font-medium text-muted-foreground sm:text-2xl">
             Aspiring Data Analyst
@@ -308,10 +316,8 @@ function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/40 via-transparent to-accent/30" />
             <img
               src={profileImg}
-              alt="Sharanya profile illustration"
-              width={768}
-              height={768}
-              className="absolute inset-x-0 bottom-0 mx-auto h-[90%] w-auto object-contain drop-shadow-2xl"
+              alt="T Sharanya"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           </div>
           <div className="absolute -bottom-4 -left-4 hidden rounded-2xl border border-border bg-card p-4 shadow-elegant md:block">
@@ -376,10 +382,11 @@ function About() {
       <div className="grid gap-10 md:grid-cols-[1.3fr_1fr]">
         <div className="space-y-5 text-base leading-relaxed text-muted-foreground sm:text-lg">
           <p>
-            I'm Sharanya, a Computer Science student passionate about transforming
-            messy raw data into clear, decision-ready insights. My journey began
-            with Excel spreadsheets and grew into Python notebooks, SQL queries
-            and interactive BI dashboards.
+            I'm T Sharanya, a B.Tech student in Artificial Intelligence &amp;
+            Data Science based in Hyderabad, Telangana. I'm passionate about
+            transforming messy raw data into clear, decision-ready insights —
+            from Excel spreadsheets to Python notebooks, SQL queries and
+            interactive BI dashboards.
           </p>
           <p>
             I love the moment when a chart reveals the hidden <em>why</em> behind
@@ -414,9 +421,10 @@ function About() {
           </div>
 
           <div className="mt-8 space-y-4 border-t border-border pt-6 text-sm">
-            <Row label="Education" value="B.Tech, Computer Science" />
+            <Row label="Education" value="B.Tech · AI & Data Science" />
             <Row label="Focus" value="Data Analytics & BI" />
-            <Row label="Location" value="India · Open to remote" />
+            <Row label="Location" value="Hyderabad, Telangana" />
+            <Row label="Phone" value="+91 6303563347" />
           </div>
         </Card>
       </div>
@@ -579,20 +587,20 @@ function Resume() {
     >
       <Card className="flex flex-col items-start justify-between gap-6 border-border bg-card p-6 sm:flex-row sm:items-center">
         <div>
-          <p className="font-display text-xl font-bold">Sharanya — Resume.pdf</p>
+          <p className="font-display text-xl font-bold">T Sharanya — Resume.pdf</p>
           <p className="mt-1 text-sm text-muted-foreground">
-            Last updated 2026 · 1 page · PDF
+            B.Tech AI &amp; DS · Hyderabad · PDF
           </p>
         </div>
         <div className="flex flex-wrap gap-3">
           <Button asChild variant="outline">
-            <a href="/resume.pdf" target="_blank" rel="noreferrer">
+            <a href={RESUME_URL} target="_blank" rel="noreferrer">
               <ExternalLink className="mr-1 h-4 w-4" />
               View
             </a>
           </Button>
           <Button asChild>
-            <a href="/resume.pdf" download>
+            <a href={RESUME_URL} download="T-Sharanya-Resume.pdf">
               <Download className="mr-1 h-4 w-4" />
               Download
             </a>
@@ -602,8 +610,8 @@ function Resume() {
 
       <div className="mt-6 overflow-hidden rounded-2xl border border-border bg-muted">
         <iframe
-          src="/resume.pdf"
-          title="Sharanya resume preview"
+          src={RESUME_URL}
+          title="T Sharanya resume preview"
           className="h-[640px] w-full"
         />
       </div>
@@ -636,22 +644,28 @@ function Contact() {
       <div className="grid gap-8 md:grid-cols-[1fr_1.2fr]">
         <div className="space-y-4">
           <ContactLink
-            icon={Mail}
-            label="Email"
-            value="sharanya@example.com"
-            href="mailto:sharanya@example.com"
+            icon={Phone}
+            label="Phone"
+            value={PHONE}
+            href="tel:+916303563347"
+          />
+          <ContactLink
+            icon={MapPin}
+            label="Location"
+            value="Hyderabad, Telangana"
+            href="https://maps.google.com/?q=Hyderabad,Telangana"
           />
           <ContactLink
             icon={Linkedin}
             label="LinkedIn"
-            value="linkedin.com/in/sharanya"
-            href="https://linkedin.com/"
+            value="linkedin.com/in/t-sharanya"
+            href={LINKEDIN_URL}
           />
           <ContactLink
             icon={Github}
             label="GitHub"
-            value="github.com/sharanya"
-            href="https://github.com/"
+            value="github.com/sharanya-t1"
+            href={GITHUB_URL}
           />
         </div>
 
@@ -738,16 +752,16 @@ function Footer() {
   return (
     <footer className="py-10">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 text-sm text-muted-foreground sm:flex-row sm:px-6">
-        <p>© {new Date().getFullYear()} Sharanya. Built with care.</p>
+        <p>© {new Date().getFullYear()} T Sharanya · Hyderabad, Telangana</p>
         <div className="flex items-center gap-4">
-          <a href="https://github.com/" target="_blank" rel="noreferrer" className="hover:text-accent">
+          <a href={GITHUB_URL} target="_blank" rel="noreferrer" className="hover:text-accent">
             <Github className="h-4 w-4" />
           </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noreferrer" className="hover:text-accent">
+          <a href={LINKEDIN_URL} target="_blank" rel="noreferrer" className="hover:text-accent">
             <Linkedin className="h-4 w-4" />
           </a>
-          <a href="mailto:sharanya@example.com" className="hover:text-accent">
-            <Mail className="h-4 w-4" />
+          <a href="tel:+916303563347" className="hover:text-accent">
+            <Phone className="h-4 w-4" />
           </a>
         </div>
       </div>
