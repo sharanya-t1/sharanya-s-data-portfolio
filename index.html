@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>T Sharanya — Aspiring Data Analyst Portfolio</title>
+<meta name="description" content="T Sharanya — B.Tech AI & DS student based in Hyderabad. Portfolio of data analysis projects, dashboards, Python, SQL, Power BI, Tableau." />
+<meta property="og:title" content="T Sharanya — Aspiring Data Analyst" />
+<meta property="og:description" content="B.Tech AI & DS · Hyderabad · Projects, dashboards & insights by T Sharanya." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#ffffff; --fg:#0b1220; --muted:#5b6472; --border:#e5e8ef;
+    --card:#ffffff; --soft:#f4f6fa; --primary:#1e3a8a; --accent:#0d9488;
+  }
+  html.dark{
+    --bg:#0b1220; --fg:#f1f5f9; --muted:#94a3b8; --border:#1f2a3d;
+    --card:#111a2c; --soft:#0f1728; --primary:#3b82f6; --accent:#2dd4bf;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--fg);line-height:1.6;transition:background .3s,color .3s}
+  h1,h2,h3,.display{font-family:"Space Grotesk",Inter,sans-serif;letter-spacing:-.02em}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:72rem;margin:0 auto;padding:0 1.5rem}
+  section{padding:5rem 0;border-bottom:1px solid var(--border)}
+  .eyebrow{color:var(--accent);font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.2em;margin-bottom:.75rem}
+  h2{font-size:clamp(1.75rem,4vw,2.75rem);font-weight:700;margin-bottom:1rem}
+  .muted{color:var(--muted)}
+  .btn{display:inline-flex;align-items:center;gap:.5rem;border-radius:.6rem;padding:.7rem 1.4rem;font-weight:600;font-size:.95rem;cursor:pointer;border:1px solid transparent;transition:transform .2s,box-shadow .2s,background .2s}
+  .btn:hover{transform:translateY(-2px)}
+  .btn-primary{background:var(--primary);color:#fff}
+  .btn-outline{border-color:var(--border);color:var(--fg);background:transparent}
+  .btn-outline:hover{border-color:var(--accent);color:var(--accent)}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:1.25rem;padding:1.5rem;transition:transform .3s,border-color .3s,box-shadow .3s}
+  .card:hover{transform:translateY(-4px);border-color:var(--accent);box-shadow:0 12px 32px rgba(13,148,136,.12)}
+  .chip{display:inline-block;border:1px solid var(--border);border-radius:999px;padding:.25rem .8rem;font-size:.78rem;font-weight:500;margin:.15rem}
+  .chip:hover{border-color:var(--accent);color:var(--accent)}
+  .tag{background:var(--soft);border-radius:999px;padding:.2rem .7rem;font-size:.75rem;font-weight:500;margin:.15rem;display:inline-block}
+  header{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:blur(14px);border-bottom:1px solid var(--border)}
+  header .wrap{display:flex;align-items:center;justify-content:space-between;height:4rem}
+  nav a{color:var(--muted);font-size:.9rem;padding:.4rem .8rem;border-radius:.5rem}
+  nav a:hover{color:var(--fg);background:var(--soft)}
+  .logo{font-weight:700;font-size:1.1rem}.logo span{color:var(--accent)}
+  #themeBtn{background:transparent;border:1px solid var(--border);border-radius:.6rem;padding:.45rem .7rem;cursor:pointer;color:var(--fg);font-size:1rem}
+  .hero{display:grid;gap:3rem;align-items:center;padding:5rem 0}
+  @media(min-width:860px){.hero{grid-template-columns:1.2fr 1fr;padding:6rem 0}}
+  .hero h1{font-size:clamp(2.6rem,7vw,4.4rem);line-height:1.05;font-weight:700}
+  .grad{background:linear-gradient(120deg,var(--primary),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .badge-open{display:inline-flex;align-items:center;gap:.4rem;border:1px solid var(--border);border-radius:999px;padding:.3rem .9rem;font-size:.8rem;margin-bottom:1.5rem;color:var(--muted)}
+  .photo-frame{position:relative;max-width:22rem;margin:0 auto;border-radius:1.5rem;overflow:hidden;border:1px solid var(--border);box-shadow:0 20px 50px rgba(30,58,138,.18);aspect-ratio:1}
+  .photo-frame img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo-name{text-align:center;font-family:"Space Grotesk",sans-serif;font-weight:700;font-size:1.5rem;margin-top:1rem}
+  .grid2{display:grid;gap:2.5rem}@media(min-width:860px){.grid2{grid-template-columns:1.3fr 1fr}}
+  .cards{display:grid;gap:1.5rem}@media(min-width:860px){.cards{grid-template-columns:1fr 1fr}}
+  .cards3{display:grid;gap:1.5rem}@media(min-width:860px){.cards3{grid-template-columns:1fr 1fr 1fr}}
+  .lbl{font-size:.72rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--accent);margin-bottom:.2rem}
+  ul{list-style:disc;padding-left:1.2rem;color:var(--muted)}
+  .bar{height:.4rem;background:var(--soft);border-radius:999px;overflow:hidden;margin-top:.35rem}
+  .bar>div{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--accent))}
+  .contact-link{display:flex;align-items:center;gap:1rem;margin-bottom:1rem}
+  .icon-box{width:2.75rem;height:2.75rem;border-radius:.8rem;background:color-mix(in srgb,var(--accent) 15%,transparent);color:var(--accent);display:grid;place-items:center;font-size:1.2rem;flex-shrink:0}
+  input,textarea{width:100%;padding:.7rem .9rem;border-radius:.6rem;border:1px solid var(--border);background:var(--bg);color:var(--fg);font:inherit;font-size:.9rem}
+  input:focus,textarea:focus{outline:2px solid var(--accent);outline-offset:1px}
+  label{display:block;font-size:.85rem;font-weight:500;margin-bottom:.35rem}
+  footer{padding:2.5rem 0;text-align:center;color:var(--muted);font-size:.9rem}
+  footer a{margin:0 .5rem}footer a:hover{color:var(--accent)}
+  .fade-up{animation:fadeUp .8s ease both}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:none}}
+  iframe.pdf{width:100%;height:640px;border:1px solid var(--border);border-radius:1rem;background:var(--soft)}
+  .row{display:flex;justify-content:space-between;gap:1rem;font-size:.9rem;padding:.35rem 0}
+  nav{display:none}@media(min-width:760px){nav{display:flex;align-items:center;gap:.25rem}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#home" class="logo">T Sharanya<span>.</span></a>
+    <nav>
+      <a href="#home">Home</a><a href="#about">About</a><a href="#projects">Projects</a>
+      <a href="#skills">Skills</a><a href="#resume">Resume</a><a href="#contact">Contact</a>
+    </nav>
+    <div style="display:flex;gap:.6rem;align-items:center">
+      <button id="themeBtn" aria-label="Toggle theme">🌙</button>
+      <a class="btn btn-primary" href="#contact" style="padding:.5rem 1rem">Hire me</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section id="home" style="border-bottom:1px solid var(--border)">
+    <div class="wrap hero">
+      <div class="fade-up">
+        <p class="badge-open">✨ Open to internships &amp; full-time roles</p>
+        <h1>Hi, I'm <span class="grad">T Sharanya</span></h1>
+        <p style="font-size:1.35rem;font-weight:500;margin-top:1rem" class="muted">Aspiring Data Analyst</p>
+        <p class="muted" style="max-width:34rem;margin-top:1rem">
+          Turning data into meaningful insights and business decisions — through clean analysis, sharp visuals, and a curious mind.
+        </p>
+        <div style="display:flex;flex-wrap:wrap;gap:.8rem;margin-top:2rem">
+          <a class="btn btn-primary" href="#projects">View Projects →</a>
+          <a class="btn btn-outline" href="#resume">⬇ Download Resume</a>
+        </div>
+        <p class="muted" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.15em;margin:2.2rem 0 .6rem">Quick skills</p>
+        <div>
+          <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Power BI</span>
+          <span class="chip">Tableau</span><span class="chip">Excel</span><span class="chip">Pandas</span>
+        </div>
+      </div>
+      <div class="fade-up">
+        <div class="photo-frame">
+          <img src="https://tsharanya.lovable.app/__l5e/assets-v1/7463f9be-2d38-40a3-9ab1-6b5b9795c770/sharanya.jpeg" alt="T Sharanya" />
+        </div>
+        <p class="photo-name">T Sharanya</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">About</p>
+      <h2>A curious mind for data, business and stories.</h2>
+      <div class="grid2" style="margin-top:2rem">
+        <div class="muted" style="font-size:1.05rem">
+          <p>I'm T Sharanya, a B.Tech student in Artificial Intelligence &amp; Data Science based in Hyderabad, Telangana. I'm passionate about transforming messy raw data into clear, decision-ready insights — from Excel spreadsheets to Python notebooks, SQL queries and interactive BI dashboards.</p>
+          <p style="margin-top:1rem">I love the moment when a chart reveals the hidden <em>why</em> behind a business metric. Whether it's analysing student performance, predicting customer churn or building a sales dashboard, I focus on clarity, accuracy and storytelling.</p>
+          <div class="card" style="margin-top:1.5rem">
+            <p style="font-weight:600;font-size:.9rem">Career goal</p>
+            <p class="muted" style="font-size:.9rem;margin-top:.3rem">To join a data-driven team where I can grow as an analyst, contribute to real business outcomes, and eventually move into advanced analytics &amp; data science.</p>
+          </div>
+        </div>
+        <div class="card">
+          <p style="font-weight:600;font-size:.9rem;margin-bottom:1rem">Toolbox</p>
+          <div>
+            <span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Excel</span>
+            <span class="chip">Power BI</span><span class="chip">Tableau</span><span class="chip">Pandas</span>
+            <span class="chip">NumPy</span><span class="chip">Scikit-learn</span><span class="chip">MySQL</span><span class="chip">Git</span>
+          </div>
+          <div style="border-top:1px solid var(--border);margin-top:1.5rem;padding-top:1.2rem">
+            <div class="row"><span class="muted">Education</span><strong>B.Tech · AI &amp; Data Science</strong></div>
+            <div class="row"><span class="muted">Focus</span><strong>Data Analytics &amp; BI</strong></div>
+            <div class="row"><span class="muted">Location</span><strong>Hyderabad, Telangana</strong></div>
+            <div class="row"><span class="muted">Phone</span><strong>+91 6303563347</strong></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <div class="wrap">
+      <p class="eyebrow">Projects</p>
+      <h2>Selected work</h2>
+      <p class="muted" style="max-width:36rem;margin-bottom:2.5rem">A few analytics projects spanning EDA, machine learning, SQL systems and BI dashboards.</p>
+      <div class="cards" id="projectCards"></div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="wrap">
+      <p class="eyebrow">Skills</p>
+      <h2>What I work with</h2>
+      <p class="muted" style="max-width:36rem;margin-bottom:2.5rem">My current toolkit across programming, visualization and data tools.</p>
+      <div class="cards3" id="skillCards"></div>
+    </div>
+  </section>
+
+  <!-- RESUME -->
+  <section id="resume">
+    <div class="wrap">
+      <p class="eyebrow">Resume</p>
+      <h2>Grab the full story</h2>
+      <p class="muted" style="max-width:36rem;margin-bottom:2rem">View or download a one-page PDF resume covering education, projects and skills.</p>
+      <div class="card" style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:1.5rem">
+        <div>
+          <p class="display" style="font-size:1.25rem;font-weight:700">T Sharanya — Resume.pdf</p>
+          <p class="muted" style="font-size:.9rem">B.Tech AI &amp; DS · Hyderabad · PDF</p>
+        </div>
+        <div style="display:flex;gap:.8rem;flex-wrap:wrap">
+          <a class="btn btn-outline" href="https://tsharanya.lovable.app/__l5e/assets-v1/2c836d27-144f-4bb3-a76d-bfce8b314b8b/Sharanya-Resume.pdf" target="_blank" rel="noreferrer">View</a>
+          <a class="btn btn-primary" href="https://tsharanya.lovable.app/__l5e/assets-v1/2c836d27-144f-4bb3-a76d-bfce8b314b8b/Sharanya-Resume.pdf" download="T-Sharanya-Resume.pdf">⬇ Download</a>
+        </div>
+      </div>
+      <iframe class="pdf" style="margin-top:1.5rem" src="https://tsharanya.lovable.app/__l5e/assets-v1/2c836d27-144f-4bb3-a76d-bfce8b314b8b/Sharanya-Resume.pdf" title="T Sharanya resume preview"></iframe>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's build something with data.</h2>
+      <p class="muted" style="max-width:36rem;margin-bottom:2.5rem">Have a role, project, or just want to chat about analytics? Drop a message.</p>
+      <div class="grid2" style="grid-template-columns:1fr 1.2fr">
+        <div>
+          <a class="card contact-link" href="tel:+916303563347"><div class="icon-box">📞</div><div><p class="muted" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em">Phone</p><p style="font-weight:500">+91 6303563347</p></div></a>
+          <a class="card contact-link" href="https://maps.google.com/?q=Hyderabad,Telangana" target="_blank" rel="noreferrer"><div class="icon-box">📍</div><div><p class="muted" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em">Location</p><p style="font-weight:500">Hyderabad, Telangana</p></div></a>
+          <a class="card contact-link" href="https://www.linkedin.com/in/t-sharanya-a305432a4" target="_blank" rel="noreferrer"><div class="icon-box">💼</div><div><p class="muted" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em">LinkedIn</p><p style="font-weight:500">linkedin.com/in/t-sharanya</p></div></a>
+          <a class="card contact-link" href="https://github.com/sharanya-t1/sharanya-s-data-portfolio" target="_blank" rel="noreferrer"><div class="icon-box">🐙</div><div><p class="muted" style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em">GitHub</p><p style="font-weight:500">github.com/sharanya-t1</p></div></a>
+        </div>
+        <div class="card">
+          <form onsubmit="event.preventDefault();this.reset();alert('Thanks! Your message has been noted. I\\'ll get back to you within 1–2 days.');">
+            <div style="display:grid;gap:1rem;grid-template-columns:1fr 1fr">
+              <div><label for="name">Name</label><input id="name" required placeholder="Your name" /></div>
+              <div><label for="email">Email</label><input id="email" type="email" required placeholder="you@email.com" /></div>
+            </div>
+            <div style="margin-top:1rem"><label for="message">Message</label><textarea id="message" rows="5" required placeholder="Tell me about the role or project..."></textarea></div>
+            <button class="btn btn-primary" style="margin-top:1rem" type="submit">Send message →</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="yr"></span> T Sharanya · Hyderabad, Telangana</p>
+  <p style="margin-top:.5rem">
+    <a href="https://github.com/sharanya-t1/sharanya-s-data-portfolio" target="_blank" rel="noreferrer">GitHub</a> ·
+    <a href="https://www.linkedin.com/in/t-sharanya-a305432a4" target="_blank" rel="noreferrer">LinkedIn</a> ·
+    <a href="tel:+916303563347">Phone</a>
+  </p>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var btn = document.getElementById('themeBtn');
+  function setIcon(){ btn.textContent = document.documentElement.classList.contains('dark') ? '☀️' : '🌙'; }
+  btn.addEventListener('click', function(){ document.documentElement.classList.toggle('dark'); setIcon(); });
+  setIcon();
+
+  var projects = [
+    { title:"Student Performance Analysis", desc:"Exploring how study habits, attendance and demographics impact academic outcomes.",
+      problem:"Identify the factors that most influence student exam scores to help educators intervene early.",
+      dataset:"1,000 student records with attendance, study hours, parental education and exam scores.",
+      steps:["Cleaned missing values and encoded categorical variables","Performed EDA with Pandas, Seaborn and Matplotlib","Built correlation matrix and regression baseline"],
+      insights:["Study hours show the strongest correlation with scores (r = 0.71)","Attendance under 70% drops average grade by ~18%"],
+      tools:["Python","Pandas","Matplotlib","Seaborn"] },
+    { title:"Customer Churn Prediction", desc:"Machine learning model to predict telecom customer churn and surface retention levers.",
+      problem:"Reduce churn by predicting which customers are likely to leave in the next 30 days.",
+      dataset:"7,000 telecom customer records with contract, tenure, charges and churn label.",
+      steps:["Feature engineering on tenure and service bundles","Trained Logistic Regression and Random Forest with Scikit-learn","Evaluated using ROC-AUC and confusion matrix"],
+      insights:["Month-to-month contracts have 3.4x higher churn","Random Forest reached 0.86 ROC-AUC on holdout set"],
+      tools:["Python","Scikit-learn","Pandas","NumPy"] },
+    { title:"Smart Billing System", desc:"SQL-driven billing analytics with automated reports for a small retail business.",
+      problem:"Manual invoicing led to revenue leakage and slow monthly reporting cycles.",
+      dataset:"Transactional database with 25k invoices across 18 months of operations.",
+      steps:["Designed normalized MySQL schema","Wrote stored procedures for tax & discount logic","Built Excel dashboard pulling live from MySQL"],
+      insights:["Cut monthly reporting time from 2 days to 20 minutes","Detected 4.2% revenue leakage in misapplied discounts"],
+      tools:["MySQL","SQL","Excel"] },
+    { title:"Sales Dashboard (Power BI / Tableau)", desc:"Interactive sales analytics dashboard tracking KPIs, regions and product mix.",
+      problem:"Leadership needed a single source of truth for weekly sales performance.",
+      dataset:"Two years of retail sales data across 12 regions and 200 SKUs.",
+      steps:["Modeled star schema with fact and dimension tables","Built DAX measures for YoY, MTD and contribution margin","Designed responsive Power BI report with drill-through pages"],
+      insights:["Top 20% of SKUs drive 78% of revenue (Pareto pattern)","Region East shows 22% YoY growth, outperforming average"],
+      tools:["Power BI","Tableau","DAX","SQL"] }
+  ];
+  var gh = "https://github.com/sharanya-t1/sharanya-s-data-portfolio";
+  document.getElementById('projectCards').innerHTML = projects.map(function(p){
+    return '<div class="card">' +
+      '<div style="display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;margin-bottom:.75rem">' +
+      '<h3 style="font-size:1.2rem;font-weight:700">'+p.title+'</h3>' +
+      '<a href="'+gh+'" target="_blank" rel="noreferrer" style="border:1px solid var(--border);border-radius:.5rem;padding:.4rem .6rem;font-size:.85rem">🐙</a></div>' +
+      '<p class="muted" style="font-size:.9rem">'+p.desc+'</p>' +
+      '<div style="margin-top:1rem;font-size:.9rem">' +
+      '<p class="lbl">Problem</p><p class="muted">'+p.problem+'</p>' +
+      '<p class="lbl" style="margin-top:.6rem">Dataset</p><p class="muted">'+p.dataset+'</p>' +
+      '<p class="lbl" style="margin-top:.6rem">Steps</p><ul>'+p.steps.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul>' +
+      '<p class="lbl" style="margin-top:.6rem">Key insights</p><ul>'+p.insights.map(function(s){return '<li>'+s+'</li>'}).join('')+'</ul></div>' +
+      '<div style="margin-top:1rem">'+p.tools.map(function(t){return '<span class="tag">'+t+'</span>'}).join('')+'</div>' +
+      '<a href="'+gh+'" target="_blank" rel="noreferrer" style="display:inline-block;margin-top:1rem;color:var(--accent);font-weight:500;font-size:.9rem">View on GitHub ↗</a>' +
+      '</div>';
+  }).join('');
+
+  var skillGroups = [
+    { title:"Programming", icon:"💻", items:[["Python",88],["SQL",85]] },
+    { title:"Visualization", icon:"📊", items:[["Power BI",82],["Tableau",78],["Matplotlib",80]] },
+    { title:"Tools & Data", icon:"🗄️", items:[["Excel",90],["Git",75],["MySQL",80]] }
+  ];
+  document.getElementById('skillCards').innerHTML = skillGroups.map(function(g){
+    return '<div class="card">' +
+      '<div style="display:flex;align-items:center;gap:.8rem;margin-bottom:1.2rem">' +
+      '<div class="icon-box">'+g.icon+'</div><h3 style="font-size:1.1rem;font-weight:700">'+g.title+'</h3></div>' +
+      g.items.map(function(it){
+        return '<div style="margin-bottom:1rem"><div style="display:flex;justify-content:space-between;font-size:.88rem"><span style="font-weight:500">'+it[0]+'</span><span class="muted">'+it[1]+'%</span></div>' +
+        '<div class="bar"><div style="width:'+it[1]+'%"></div></div></div>';
+      }).join('') + '</div>';
+  }).join('');
+</script>
+</body>
+</html>
